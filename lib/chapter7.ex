@@ -105,3 +105,27 @@ IO.inspect(superheroeMap4.())
 
 IO.puts("\n>>> Accessing the atom keys ")
 IO.puts(map.superheroe <> " " <> map.superpower <> " " <> map.universe)
+
+IO.puts(
+  "\n============================== >> 4. Nested data structure << ==============================="
+)
+
+IO.puts("\n>>> Map contains list %{key: value [] }")
+
+userslist = [
+  user1: %{name: "John", age: 27, languages: ["Erlang", "Ruby", "Elixir"]},
+  user2: %{name: "Mary", age: 29, languages: ["Elixir", "F#", "Clojure"]}
+]
+
+IO.puts("\n>>> Search a value for the key")
+IO.puts(userslist[:user1].name)
+
+IO.puts("\n>>> Update a value with the function put_in()")
+userListUpdate = put_in(userslist[:user1].age, 31)
+IO.puts("   Old value: #{userslist[:user1].age}")
+IO.puts("   New value: #{userListUpdate[:user1].age}")
+
+IO.puts("\n>>> Remove a value with the function List.delete()")
+userListRemove =
+  update_in(userslist[:user1].languages, fn languages -> List.delete(languages, "Ruby") end)
+  IO.inspect(userListRemove)
