@@ -1,5 +1,5 @@
 defmodule ModuleOne do
-  def actualDate() do
+  def actual_date do
     IO.puts(">>> Elixir Bootcamp <<<")
 
     IO.puts(">>> Module and functions <<<\n#{Date.utc_today()}")
@@ -14,9 +14,9 @@ defmodule ModuleOne do
   end
 end
 
-ModuleOne.actualDate()
+ModuleOne.actual_date()
 IO.puts("\n________________________________________________________________________________")
-IO.puts("Module: ModuleOne\nFunctions: actualDate(), verify_value()")
+IO.puts("Module: ModuleOne\nFunctions: actual_date(), verify_value()")
 IO.puts("________________________________________________________________________________")
 
 IO.puts("#{ModuleOne.verify_value?(0)}")
