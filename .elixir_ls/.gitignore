@@ -1,0 +1,9 @@
+# Created by YanethM
+# Edit at 12/07/2022
+
+### Elixir ###
+/_build
+*.ez
+*.beam
+/config/*.secret.exs
+.elixir_ls/

@@ -1,9 +1,9 @@
-# Data type: Date 
+# Data type: Date
 date = ~D[2022-07-08]
-IO.puts("                       >>> Elixir Bootcamp <<<\n                               #{date}")
+IO.puts(">>> Elixir Bootcamp <<<\n#{date}")
 IO.puts("====================================================\n")
 
-# Data type: String 
+# Data type: String
 message = "Hi " <> "Juan"
 number_practice = String.upcase("first")
 message2 = "#{message},\nThis is the #{number_practice} practice in Elixir"
