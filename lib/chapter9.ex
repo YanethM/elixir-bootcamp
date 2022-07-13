@@ -22,7 +22,7 @@ defmodule Math do
   end
 end
 
-IO.puts("       >>> Reduce algorithm\n       Double all of the values in the list")
+IO.puts(">>> Reduce algorithm\nDouble all of the values in the list")
 
 defmodule Math do
   def double_each([head | tail]) do
@@ -34,8 +34,8 @@ defmodule Math do
   end
 end
 
-IO.puts("       >>> Enum module\n       Enum.reduce()")
-IO.puts("         #{Math.double_each([1, 2, 3])}")
-IO.puts("         #{Enum.reduce([1, 2, 3], 0, fn(x, acc) -> x + acc end)}")
-IO.puts("       Enum.map()")
-IO.puts("         #{Enum.map([12, 22, 31], fn(x) -> x * 2 end)}")
+IO.puts(">>> Enum module\nEnum.reduce()")
+IO.puts("#{Math.double_each([1, 2, 3])}")
+IO.puts("#{Enum.reduce([1, 2, 3], 0, fn x, acc -> x + acc end)}")
+IO.puts("Enum.map()")
+IO.puts("#{Enum.map([12, 22, 31], fn x -> x * 2 end)}")

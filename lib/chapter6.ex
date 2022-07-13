@@ -4,11 +4,9 @@ IO.puts(
   "========================================================================================="
 )
 
-IO.puts("                          >>> Elixir Bootcamp <<<")
+IO.puts(">>> Elixir Bootcamp <<<")
 
-IO.puts(
-  "                       >>> Unicode and Code Points<<<\n                               #{date}"
-)
+IO.puts(">>> Unicode and Code Points<<<\n     #{date}")
 
 IO.puts(
   "=========================================================================================\n"
@@ -42,14 +40,14 @@ IO.puts(
 )
 
 <<head, rest::binary>> = user_name
-IO.puts("      Head of the word: #{head} rest of the word: #{rest}")
-IO.puts("      user_name to_charlist => #{to_charlist(user_name)}")
-IO.puts("      :ok to_string => #{to_string(:ok)}")
+IO.puts("Head of the word: #{head} rest of the word: #{rest}")
+IO.puts("user_name to_charlist => #{to_charlist(user_name)}")
+IO.puts(":ok to_string => #{to_string(:ok)}")
 
 IO.puts(
   "\n========================= Concatenation ================================================"
 )
 
 IO.puts(
-  "String binary concatenation\n      >> This is not OK =>'character1 ' <> 'character2'\n      >> This is OK =>'character1 ' ++ 'character2'\n      >> This is OK => string1 <> string2"
+  "String binary concatenation\n>> This is not OK =>'character1 ' <> 'character2'\n>> This is OK =>'character1 ' ++ 'character2'\n>> This is OK => string1 <> string2"
 )

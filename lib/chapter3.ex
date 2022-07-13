@@ -1,6 +1,6 @@
-# Data type: Date 
+# Data type: Date
 date = ~D[2022-07-08]
-IO.puts("                       >>> Elixir Bootcamp <<<\n                               #{date}")
+IO.puts(">>> Elixir Bootcamp <<<\n#{date}")
 IO.puts("====================================================\n")
 # ================ AND, OR Operators ===================
 operator1 = fn -> IO.puts(true and true) end

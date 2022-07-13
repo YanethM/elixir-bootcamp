@@ -1,6 +1,6 @@
-# Data type: Date 
+# Data type: Date
 date = ~D[2022-07-08]
-IO.puts("                       >>> Elixir Bootcamp <<<\n                               #{date}")
+IO.puts(">>> Elixir Bootcamp <<<\n#{date}")
 IO.puts("====================================================\n")
 # Anonymous functions
 num1 = 10
@@ -48,7 +48,7 @@ IO.puts("\n========================Tuples======================\n")
 programming_language_tuple = {"Javascript", " Python", " Elixir"}
 IO.puts("Number of elements of the tuple: #{tuple_size(programming_language_tuple)}")
 
-#========================Read file contents===========================
+# ========================Read file contents===========================
 # The next line doesn't works with IO.puts()
 IO.puts("\n=================Read file contents=================\n")
 
