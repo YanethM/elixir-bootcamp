@@ -23,18 +23,18 @@ IO.puts("#{ModuleOne.verify_value?(0)}")
 IO.puts("#{ModuleOne.verify_value?(1)}")
 
 defmodule ModuleTwo do
-  def varify_value?(0), do: true
-  def varify_value?(x) when is_integer(x), do: false
-  def varify_value?(x) when is_list(x), do: false
+  def verify_value?(0), do: true
+  def verify_value?(x) when is_integer(x), do: false
+  def verify_value?(x) when is_list(x), do: false
 end
 
 IO.puts("\n________________________________________________________________________________")
 IO.puts("Module: ModuleTwo\nFunction and guards")
 IO.puts("________________________________________________________________________________")
 
-IO.puts("#{ModuleTwo.varify_value?(0)}")
-IO.puts("#{ModuleTwo.varify_value?(10)}")
-IO.puts("#{ModuleTwo.varify_value?([1, 2, 3])}")
+IO.puts("#{ModuleTwo.verify_value?(0)}")
+IO.puts("#{ModuleTwo.verify_value?(10)}")
+IO.puts("#{ModuleTwo.verify_value?([1, 2, 3])}")
 
 defmodule ModuleThree do
   def join(a, b, sep \\ " ") do

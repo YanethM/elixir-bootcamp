@@ -24,13 +24,13 @@ IO.puts(
 [a: b] = [a: 20]
 IO.puts("[a: b] = [a: 20] =>The value of b is: #{b}")
 
-superheroFn = fn ->
+superhero_fn = fn ->
   IO.puts(
     "[{:superhero, 'Batman'}] == [superhero: 'Batman'] => #{[{:superhero, "Batman"}] == [superhero: "Batman"]}"
   )
 end
 
-superheroFn.()
+superhero_fn.()
 
 IO.puts("Add to IronMan in the list using ++")
 
@@ -41,13 +41,13 @@ superheros = [
   superheroKey: "SpiderMan"
 ]
 
-superherosAddFn = fn -> IO.inspect(superheros ++ [superheroKey: "IronMan"]) end
-superherosAddFn.()
+superheros_add_fn = fn -> IO.inspect(superheros ++ [superheroKey: "IronMan"]) end
+superheros_add_fn.()
 
 IO.puts("Substract Hulk using --")
 
-superherosSubstractFn = fn -> IO.inspect(superheros -- [superheroKey: "Hulk"]) end
-superherosSubstractFn.()
+superheros_substract_fn = fn -> IO.inspect(superheros -- [superheroKey: "Hulk"]) end
+superheros_substract_fn.()
 
 searchValue = fn ->
   IO.puts("Reading the value of a keyword: #{superheros[:superheroKey]}")
@@ -69,34 +69,34 @@ IO.inspect(user_name)
 
 IO.puts("\nget() function")
 
-superheroeMap = fn ->
+superheroe_map = fn ->
   Map.get(%{:superheroe => "Green Lantern", :superpower => "Fly"}, :superpower)
 end
 
-IO.puts(superheroeMap.())
+IO.puts(superheroe_map.())
 
 IO.puts("\nput() function")
 
-superheroeMap2 = fn ->
+superheroe_map2 = fn ->
   Map.put(%{:superheroe => "Green Lantern", :superpower => "Fly"}, :universe, "DC")
 end
 
-IO.inspect(superheroeMap2.())
+IO.inspect(superheroe_map2.())
 
 IO.puts("\nto_list() function")
 
-superheroeMap3 = fn ->
+superheroe_map3 = fn ->
   Map.to_list(%{:superheroe => "Green Lantern", :superpower => "Fly", :universe => "DC"})
 end
 
-IO.inspect(superheroeMap3.())
+IO.inspect(superheroe_map3.())
 
 IO.puts("\nUpdate a key's value")
 map = %{:superheroe => "Green Lantern", :superpower => "Fly", :universe => "DC"}
 
-superheroeMap4 = fn -> %{map | :superpower => "Ring of power"} end
+superheroe_map4 = fn -> %{map | :superpower => "Ring of power"} end
 
-IO.inspect(superheroeMap4.())
+IO.inspect(superheroe_map4.())
 
 IO.puts("\n Accessing the atom keys ")
 IO.puts(map.superheroe <> " " <> map.superpower <> " " <> map.universe)
@@ -107,25 +107,25 @@ IO.puts(
 
 IO.puts("\n Map contains list %{key: value [] }")
 
-userslist = [
+users_list = [
   user1: %{name: "John", age: 27, languages: ["Erlang", "Ruby", "Elixir"]},
   user2: %{name: "Mary", age: 29, languages: ["Elixir", "F#", "Clojure"]}
 ]
 
 IO.puts("\n Search a value for the key")
-IO.puts(userslist[:user1].name)
+IO.puts(users_list[:user1].name)
 
 IO.puts("\n Update a value with the function put_in()")
-userListUpdate = put_in(userslist[:user1].age, 31)
-IO.puts("   Old value: #{userslist[:user1].age}")
-IO.puts("   New value: #{userListUpdate[:user1].age}")
+user_list_update = put_in(users_list[:user1].age, 31)
+IO.puts("   Old value: #{users_list[:user1].age}")
+IO.puts("   New value: #{user_list_update[:user1].age}")
 
 IO.puts("\n Remove a value with the function List.delete()")
 
 # function List.delete() receives the element to be deleted
-deleteElement = fn languages -> List.delete(languages, "Ruby") end
+delete_element = fn languages -> List.delete(languages, "Ruby") end
 
 # function update_in() receives two params, the key to be modified and the element to be deleted
-userListRemove = update_in(userslist[:user1].languages, deleteElement)
+user_list_remove = update_in(users_list[:user1].languages, delete_element)
 
-IO.inspect(userListRemove)
+IO.inspect(user_list_remove)
