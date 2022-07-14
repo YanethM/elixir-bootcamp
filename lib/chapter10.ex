@@ -45,7 +45,7 @@ defmodule Chapter10 do
   end
 end
 
-defmodule EnumPartTwo do
+defmodule EnumSecondPart do
   @versions_list [1, 2, 3, 41, 3, -2]
   @framework_list1 ["Angular", "Vue", "React", "Ember", "Dojo"]
 
@@ -66,7 +66,34 @@ defmodule EnumPartTwo do
     IO.inspect(Enum.reduce(@framework_list1, "Ember", accumulator_framework))
   end
 
-  def sort_enum, do: IO.inspect(Enum.sort(@versions_list))
+  def desc_sort_enum, do: IO.inspect(Enum.sort(@versions_list, :desc))
+  def asc_sort_enum, do: IO.inspect(Enum.sort(@versions_list, :asc))
+
+  def sort_custom_enum do
+    descending_order = fn x, y -> x[:value] > y[:value] end
+    IO.inspect(Enum.sort([%{:value => 21}, %{:value => 34}], descending_order))
+  end
+
+  def unique_value, do: IO.inspect(Enum.uniq(@versions_list))
+
+  def eliminate_coordinated do
+    map_list = [%{x: 1, y: 1}, %{x: 2, y: 1}, %{x: 3, y: 3}, %{x: 2, y: 3}]
+    IO.inspect(Enum.uniq_by(map_list, fn coord -> coord.y end))
+  end
+end
+
+defmodule EnumThirdPart do
+  @versions_list [1, 2, 3, 41, 3, -2]
+
+  def sum_function do
+    sum3 = fn number -> number+3 end
+    IO.inspect(Enum.map(@versions_list, sum3))
+  end
+
+  def sum_capture_operator do
+    sum3 =&(&1 + 3)
+    IO.inspect(Enum.map(@versions_list, sum3))
+  end
 end
 
 # Function calls section
@@ -78,6 +105,13 @@ Chapter10.any_function()
 Chapter10.chunk_every_function()
 Chapter10.min_and_max()
 
-EnumPartTwo.filter_function()
-EnumPartTwo.reduce_function()
-EnumPartTwo.sort_enum()
+EnumSecondPart.filter_function()
+EnumSecondPart.reduce_function()
+EnumSecondPart.desc_sort_enum()
+EnumSecondPart.asc_sort_enum()
+EnumSecondPart.sort_custom_enum()
+EnumSecondPart.unique_value()
+EnumSecondPart.eliminate_coordinated()
+
+EnumThirdPart.sum_function()
+EnumThirdPart.sum_capture_operator()
