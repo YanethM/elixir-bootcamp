@@ -1,4 +1,5 @@
 defmodule User do
+<<<<<<< HEAD
   @doc """
   commands:
   iex> %User{}
@@ -29,4 +30,7 @@ defmodule Car do
   """
   @enforce_keys [:make]
   defstruct [:model, make: "Mazda"]
+=======
+  defstruct name: "John", age: 27
+>>>>>>> 6ff3eac (Delete file chapter13.exs)
 end
