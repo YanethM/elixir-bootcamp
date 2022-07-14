@@ -21,3 +21,4 @@ defmodule Example do
   require Feature
   Feature.__using__(option: :value)
 end
+IO.in
