@@ -1,5 +1,7 @@
 defmodule ModuleOne do
-  def actualDate() do
+
+  def actual_date do
+
     IO.puts(">>> Elixir Bootcamp <<<")
 
     IO.puts(">>> Module and functions <<<\n#{Date.utc_today()}")
@@ -14,27 +16,29 @@ defmodule ModuleOne do
   end
 end
 
-ModuleOne.actualDate()
+
+ModuleOne.actual_date()
 IO.puts("\n________________________________________________________________________________")
-IO.puts("Module: ModuleOne\nFunctions: actualDate(), verify_value()")
+IO.puts("Module: ModuleOne\nFunctions: actual_date(), verify_value()")
 IO.puts("________________________________________________________________________________")
 
 IO.puts("#{ModuleOne.verify_value?(0)}")
 IO.puts("#{ModuleOne.verify_value?(1)}")
 
 defmodule ModuleTwo do
-  def varify_value?(0), do: true
-  def varify_value?(x) when is_integer(x), do: false
-  def varify_value?(x) when is_list(x), do: false
+
+  def verify_value?(0), do: true
+  def verify_value?(x) when is_integer(x), do: false
+  def verify_value?(x) when is_list(x), do: false
 end
 
 IO.puts("\n________________________________________________________________________________")
 IO.puts("Module: ModuleTwo\nFunction and guards")
 IO.puts("________________________________________________________________________________")
 
-IO.puts("#{ModuleTwo.varify_value?(0)}")
-IO.puts("#{ModuleTwo.varify_value?(10)}")
-IO.puts("#{ModuleTwo.varify_value?([1, 2, 3])}")
+IO.puts("#{ModuleTwo.verify_value?(0)}")
+IO.puts("#{ModuleTwo.verify_value?(10)}")
+IO.puts("#{ModuleTwo.verify_value?([1, 2, 3])}")
 
 defmodule ModuleThree do
   def join(a, b, sep \\ " ") do

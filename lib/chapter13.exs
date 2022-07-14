@@ -4,7 +4,7 @@ defmodule Math do
     duplicate(:ok, 10)
   end
 end
-
+ExUnit.start()
 
 defmodule AssertionTest do
   use ExUnit.Case, async: true
@@ -12,13 +12,3 @@ defmodule AssertionTest do
     assert true
   end
 end
-
-defmodule Example do
-  use Feature, option: :value
-end
-
-defmodule Example do
-  require Feature
-  Feature.__using__(option: :value)
-end
-IO.in
