@@ -8,13 +8,9 @@ IO.puts("=====================================================================\n
 
 IO.puts("1. CASE EXAMPLES")
 
-IO.puts(
-  "<< Structure >>:\ncase{values}do\n (validation match 1) -> result\n (validation match 2) -> result\nend\n"
-)
-
 # Variables declaration
 x = 2
-cherryPie = true
+cherry_pie = true
 
 # Example 1: Number, text
 case {18, "Hello"} do
@@ -53,14 +49,13 @@ case {1, 2, 3} do
 end
 
 case true do
-  ^cherryPie -> IO.puts("^cherryPie match with cherryPie")
-  true -> IO.puts("true match with cherryPie")
+
+  ^cherry_pie -> IO.puts("^cherry_pie match with cherry_pie")
+  true -> IO.puts("true match with cherry_pie")
 end
 
 # Examples using cond
 IO.puts("\n2. COND EXAMPLES")
-
-IO.puts("<< Structure >>:\ncond do\n (validation) ->\n result\nend\n")
 
 cond do
   2 + 2 == 10 ->
@@ -83,8 +78,6 @@ end
 
 # Examples using if and unless
 IO.puts("\n3. IF AND UNLESS EXAMPLES")
-
-IO.puts("<< Structure >>:\nif\n (validation) do\n result\nend\n")
 
 if true do
   IO.puts("This works!")
