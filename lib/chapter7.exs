@@ -26,6 +26,7 @@ IO.puts("[a: b] = [a: 20] =>The value of b is: #{b}")
 
 
 superhero_fn = fn ->
+
   IO.puts(
     "[{:superhero, 'Batman'}] == [superhero: 'Batman'] => #{[{:superhero, "Batman"}] == [superhero: "Batman"]}"
   )
@@ -86,7 +87,6 @@ superheroe_map3 = fn ->
   Map.to_list(%{:superheroe => "Green Lantern", :superpower => "Fly", :universe => "DC"})
 end
 
-
 IO.puts("\nUpdate a key's value")
 map = %{:superheroe => "Green Lantern", :superpower => "Fly", :universe => "DC"}
 
@@ -105,6 +105,7 @@ IO.puts("\n Map contains list %{key: value [] }")
 
 
 users_list = [
+
   user1: %{name: "John", age: 27, languages: ["Erlang", "Ruby", "Elixir"]},
   user2: %{name: "Mary", age: 29, languages: ["Elixir", "F#", "Clojure"]}
 ]
