@@ -5,6 +5,7 @@ defmodule Math do
   end
 end
 ExUnit.start()
+
 defmodule AssertionTest do
   use ExUnit.Case, async: true
   test "always pass" do
