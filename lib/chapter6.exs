@@ -16,7 +16,7 @@ string = "Elixir path"
 user_name = "Yaneth Mejía"
 
 IO.puts(
-  "\n================= String.length(), byte_size() and IO.inspect() ========================="
+  "\n================= String.length(), byte_size() ========================="
 )
 
 IO.puts(?Y)
@@ -26,7 +26,6 @@ IO.puts(
   "#{user_name} has #{String.length(user_name)} characters and uses #{byte_size(user_name)} bytes"
 )
 
-IO.puts("#{IO.inspect(user_name, binaries: :as_binaries)}")
 
 IO.puts(
   "\n========================= Graphemes using emojis ========================================"

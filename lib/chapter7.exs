@@ -62,11 +62,9 @@ IO.puts(
 
 map1 = %{:user_name => "Yaneth", :profession => "Enginner"}
 map2 = %{1 => "Enginner", :user_name => "Yaneth"}
-IO.inspect(map1)
-IO.inspect(map2)
 
-IO.inspect(%{:user_name => user_name} = %{:user_name => "Yaneth", :profession => "Enginner"})
-IO.inspect(user_name)
+%{:user_name => user_name} = %{:user_name => "Yaneth", :profession => "Enginner"})
+user_name
 
 IO.puts("\nget() function")
 
@@ -82,23 +80,19 @@ superheroe_map2 = fn ->
   Map.put(%{:superheroe => "Green Lantern", :superpower => "Fly"}, :universe, "DC")
 end
 
-IO.inspect(superheroe_map2.())
-
 IO.puts("\nto_list() function")
 
 superheroe_map3 = fn ->
   Map.to_list(%{:superheroe => "Green Lantern", :superpower => "Fly", :universe => "DC"})
 end
 
-IO.inspect(superheroe_map3.())
 
 IO.puts("\nUpdate a key's value")
 map = %{:superheroe => "Green Lantern", :superpower => "Fly", :universe => "DC"}
 
 
-superheroe_map4 = fn -> %{map | :superpower => "Ring of power"} end
 
-IO.inspect(superheroe_map4.())
+superheroe_map4 = fn -> %{map | :superpower => "Ring of power"} end
 
 IO.puts("\n Accessing the atom keys ")
 IO.puts(map.superheroe <> " " <> map.superpower <> " " <> map.universe)
@@ -132,5 +126,3 @@ delete_element = fn languages -> List.delete(languages, "Ruby") end
 
 # function update_in() receives two params, the key to be modified and the element to be deleted
 user_list_remove = update_in(users_list[:user1].languages, delete_element)
-
-IO.inspect(user_list_remove)

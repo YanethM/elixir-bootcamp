@@ -52,6 +52,6 @@ IO.puts("Number of elements of the tuple: #{tuple_size(programming_language_tupl
 # The next line doesn't works with IO.puts()
 IO.puts("\n=================Read file contents=================\n")
 
-IO.inspect(put_elem(programming_language_tuple, 1, "Ruby on Rails"))
+put_elem(programming_language_tuple, 1, "Ruby on Rails")
 file_content = File.read("./public/file.txt")
-IO.inspect(file_content)
+file_content
