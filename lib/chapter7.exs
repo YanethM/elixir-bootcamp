@@ -69,6 +69,7 @@ user_name
 
 IO.puts("\nget() function")
 
+<<<<<<< HEAD
 superheroe_map = fn ->
   Map.get(%{:superheroe => "Green Lantern", :superpower => "Fly"}, :superpower)
 end
@@ -104,8 +105,8 @@ IO.puts(
 IO.puts("\n Map contains list %{key: value [] }")
 
 
-users_list = [
 
+users_list = [
   user1: %{name: "John", age: 27, languages: ["Erlang", "Ruby", "Elixir"]},
   user2: %{name: "Mary", age: 29, languages: ["Elixir", "F#", "Clojure"]}
 ]

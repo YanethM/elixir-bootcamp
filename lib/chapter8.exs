@@ -1,7 +1,7 @@
 defmodule ModuleOne do
 
-  def actual_date do
 
+  def actual_date do
 
     IO.puts(">>> Elixir Bootcamp <<<")
 
@@ -21,6 +21,7 @@ end
 ModuleOne.actual_date()
 IO.puts("\n________________________________________________________________________________")
 IO.puts("Module: ModuleOne\nFunctions: actual_date(), verify_value()")
+
 
 IO.puts("________________________________________________________________________________")
 
@@ -42,8 +43,6 @@ IO.puts("_______________________________________________________________________
 IO.puts("#{ModuleTwo.verify_value?(0)}")
 IO.puts("#{ModuleTwo.verify_value?(10)}")
 IO.puts("#{ModuleTwo.verify_value?([1, 2, 3])}")
-
-
 defmodule ModuleThree do
   def join(a, b, sep \\ " ") do
     IO.puts("Concatenate text with a special character")

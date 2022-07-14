@@ -4,7 +4,6 @@ defmodule Math do
     duplicate(:ok, 10)
   end
 end
-ExUnit.start()
 
 defmodule AssertionTest do
   use ExUnit.Case, async: true

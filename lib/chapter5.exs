@@ -8,10 +8,11 @@ IO.puts("=====================================================================\n
 
 IO.puts("1. CASE EXAMPLES")
 
-<<<<<<< HEAD
+
 # Variables declaration
 x = 2
 cherry_pie = true
+
 
 # Example 1: Number, text
 case {18, "Hello"} do
@@ -50,24 +51,14 @@ case {1, 2, 3} do
 end
 
 case true do
-<<<<<<< HEAD
 
   ^cherry_pie -> IO.puts("^cherry_pie match with cherry_pie")
   true -> IO.puts("true match with cherry_pie")
-=======
-  ^cherryPie -> IO.puts("^cherryPie match with cherryPie")
-  true -> IO.puts("true match with cherryPie")
->>>>>>> 4a503ac (Remove the IO.inspect of alla the files)
-end
+
 
 # Examples using cond
 IO.puts("\n2. COND EXAMPLES")
 
-<<<<<<< HEAD
-=======
-IO.puts("<< Structure >>:\ncond do\n (validation) ->\n result\nend\n")
-
->>>>>>> 4a503ac (Remove the IO.inspect of alla the files)
 cond do
   2 + 2 == 10 ->
     IO.puts("Not is true")
@@ -89,12 +80,6 @@ end
 
 # Examples using if and unless
 IO.puts("\n3. IF AND UNLESS EXAMPLES")
-
-<<<<<<< HEAD
-=======
-IO.puts("<< Structure >>:\nif\n (validation) do\n result\nend\n")
-
->>>>>>> 4a503ac (Remove the IO.inspect of alla the files)
 if true do
   IO.puts("This works!")
 end
