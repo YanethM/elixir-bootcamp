@@ -8,11 +8,9 @@ IO.puts("=====================================================================\n
 
 IO.puts("1. CASE EXAMPLES")
 
-
 # Variables declaration
 x = 2
 cherry_pie = true
-
 
 # Example 1: Number, text
 case {18, "Hello"} do
@@ -51,14 +49,11 @@ case {1, 2, 3} do
 end
 
 case true do
-
   ^cherry_pie -> IO.puts("^cherry_pie match with cherry_pie")
   true -> IO.puts("true match with cherry_pie")
 
-
 # Examples using cond
 IO.puts("\n2. COND EXAMPLES")
-
 cond do
   2 + 2 == 10 ->
     IO.puts("Not is true")
