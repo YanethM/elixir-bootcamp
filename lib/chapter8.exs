@@ -30,6 +30,7 @@ defmodule ModuleTwo do
   def verify_value?(0), do: true
   def verify_value?(x) when is_integer(x), do: false
   def verify_value?(x) when is_list(x), do: false
+
 end
 
 IO.puts("\n________________________________________________________________________________")

@@ -24,7 +24,6 @@ IO.puts(
 [a: b] = [a: 20]
 IO.puts("[a: b] = [a: 20] =>The value of b is: #{b}")
 
-
 superhero_fn = fn ->
   IO.puts(
     "[{:superhero, 'Batman'}] == [superhero: 'Batman'] => #{[{:superhero, "Batman"}] == [superhero: "Batman"]}"
@@ -32,7 +31,6 @@ superhero_fn = fn ->
 end
 
 superhero_fn.()
-
 IO.puts("Add to IronMan in the list using ++")
 
 superheros = [
@@ -41,6 +39,7 @@ superheros = [
   superheroKey: "Hulk",
   superheroKey: "SpiderMan"
 ]
+
 
 superheros_add_fn = fn -> IO.inspect(superheros ++ [superheroKey: "IronMan"]) end
 superheros_add_fn.()
@@ -86,7 +85,6 @@ superheroe_map3 = fn ->
   Map.to_list(%{:superheroe => "Green Lantern", :superpower => "Fly", :universe => "DC"})
 end
 
-
 IO.puts("\nUpdate a key's value")
 map = %{:superheroe => "Green Lantern", :superpower => "Fly", :universe => "DC"}
 
@@ -104,12 +102,15 @@ IO.puts(
 IO.puts("\n Map contains list %{key: value [] }")
 
 
+
+
 users_list = [
   user1: %{name: "John", age: 27, languages: ["Erlang", "Ruby", "Elixir"]},
   user2: %{name: "Mary", age: 29, languages: ["Elixir", "F#", "Clojure"]}
 ]
 
 IO.puts("\n Search a value for the key")
+
 
 IO.puts(users_list[:user1].name)
 
@@ -120,9 +121,12 @@ IO.puts("   New value: #{user_list_update[:user1].age}")
 
 IO.puts("\n Remove a value with the function List.delete()")
 
-# function List.delete() receives the element to be deleted
-
 delete_element = fn languages -> List.delete(languages, "Ruby") end
 
 # function update_in() receives two params, the key to be modified and the element to be deleted
 user_list_remove = update_in(users_list[:user1].languages, delete_element)
+
+deleteElement = fn languages -> List.delete(languages, "Ruby") end
+
+# function update_in() receives two params, the key to be modified and the element to be deleted
+userListRemove = update_in(userslist[:user1].languages, deleteElement)

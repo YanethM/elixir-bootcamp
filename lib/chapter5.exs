@@ -49,14 +49,11 @@ case {1, 2, 3} do
 end
 
 case true do
-
   ^cherry_pie -> IO.puts("^cherry_pie match with cherry_pie")
   true -> IO.puts("true match with cherry_pie")
-end
 
 # Examples using cond
 IO.puts("\n2. COND EXAMPLES")
-
 cond do
   2 + 2 == 10 ->
     IO.puts("Not is true")
@@ -78,7 +75,6 @@ end
 
 # Examples using if and unless
 IO.puts("\n3. IF AND UNLESS EXAMPLES")
-
 if true do
   IO.puts("This works!")
 end
