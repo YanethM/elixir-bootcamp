@@ -49,6 +49,7 @@ IO.puts("Substract Hulk using --")
 superheros_substract_fn = fn -> IO.inspect(superheros -- [superheroKey: "Hulk"]) end
 superheros_substract_fn.()
 
+
 searchValue = fn ->
   IO.puts("Reading the value of a keyword: #{superheros[:superheroKey]}")
 end
@@ -88,8 +89,6 @@ end
 IO.puts("\nUpdate a key's value")
 map = %{:superheroe => "Green Lantern", :superpower => "Fly", :universe => "DC"}
 
-
-
 superheroe_map4 = fn -> %{map | :superpower => "Ring of power"} end
 
 IO.puts("\n Accessing the atom keys ")
@@ -125,8 +124,3 @@ delete_element = fn languages -> List.delete(languages, "Ruby") end
 
 # function update_in() receives two params, the key to be modified and the element to be deleted
 user_list_remove = update_in(users_list[:user1].languages, delete_element)
-
-deleteElement = fn languages -> List.delete(languages, "Ruby") end
-
-# function update_in() receives two params, the key to be modified and the element to be deleted
-userListRemove = update_in(userslist[:user1].languages, deleteElement)
