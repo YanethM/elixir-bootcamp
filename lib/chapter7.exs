@@ -40,7 +40,6 @@ superheros = [
   superheroKey: "SpiderMan"
 ]
 
-
 superheros_add_fn = fn -> IO.inspect(superheros ++ [superheroKey: "IronMan"]) end
 superheros_add_fn.()
 
@@ -48,8 +47,6 @@ IO.puts("Substract Hulk using --")
 
 superheros_substract_fn = fn -> IO.inspect(superheros -- [superheroKey: "Hulk"]) end
 superheros_substract_fn.()
-
-
 searchValue = fn ->
   IO.puts("Reading the value of a keyword: #{superheros[:superheroKey]}")
 end
@@ -91,6 +88,7 @@ map = %{:superheroe => "Green Lantern", :superpower => "Fly", :universe => "DC"}
 
 superheroe_map4 = fn -> %{map | :superpower => "Ring of power"} end
 
+
 IO.puts("\n Accessing the atom keys ")
 IO.puts(map.superheroe <> " " <> map.superpower <> " " <> map.universe)
 
@@ -100,17 +98,12 @@ IO.puts(
 
 IO.puts("\n Map contains list %{key: value [] }")
 
-
-
-
 users_list = [
   user1: %{name: "John", age: 27, languages: ["Erlang", "Ruby", "Elixir"]},
   user2: %{name: "Mary", age: 29, languages: ["Elixir", "F#", "Clojure"]}
 ]
 
 IO.puts("\n Search a value for the key")
-
-
 IO.puts(users_list[:user1].name)
 
 IO.puts("\n Update a value with the function put_in()")

@@ -51,6 +51,7 @@ end
 case true do
   ^cherry_pie -> IO.puts("^cherry_pie match with cherry_pie")
   true -> IO.puts("true match with cherry_pie")
+end
 
 # Examples using cond
 IO.puts("\n2. COND EXAMPLES")

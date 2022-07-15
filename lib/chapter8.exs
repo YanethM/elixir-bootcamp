@@ -1,7 +1,7 @@
 defmodule ModuleOne do
 
   def actual_date do
-
+>>>>>>> chapter7to9:lib/chapter8.ex
     IO.puts(">>> Elixir Bootcamp <<<")
 
     IO.puts(">>> Module and functions <<<\n#{Date.utc_today()}")
@@ -16,7 +16,6 @@ defmodule ModuleOne do
   end
 end
 
-
 ModuleOne.actual_date()
 IO.puts("\n________________________________________________________________________________")
 IO.puts("Module: ModuleOne\nFunctions: actual_date(), verify_value()")
@@ -26,7 +25,6 @@ IO.puts("#{ModuleOne.verify_value?(0)}")
 IO.puts("#{ModuleOne.verify_value?(1)}")
 
 defmodule ModuleTwo do
-
   def verify_value?(0), do: true
   def verify_value?(x) when is_integer(x), do: false
   def verify_value?(x) when is_list(x), do: false
